@@ -4,7 +4,7 @@
 #
 Name     : GitPython
 Version  : 1.0.2
-Release  : 4
+Release  : 5
 URL      : https://pypi.python.org/packages/source/G/GitPython/GitPython-1.0.2.tar.gz
 Source0  : https://pypi.python.org/packages/source/G/GitPython/GitPython-1.0.2.tar.gz
 Summary  : Python Git Library
