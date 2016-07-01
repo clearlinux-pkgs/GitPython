@@ -1,5 +1,5 @@
 PKG_NAME := GitPython
-URL := https://pypi.python.org/packages/source/G/GitPython/GitPython-1.0.2.tar.gz
+URL := http://pypi.debian.net/GitPython/GitPython-2.0.6.tar.gz
 ARCHIVES :=
 
 include ../common/Makefile.common
