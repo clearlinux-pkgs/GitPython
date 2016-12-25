@@ -4,7 +4,7 @@
 #
 Name     : GitPython
 Version  : 2.0.8
-Release  : 8
+Release  : 9
 URL      : http://pypi.debian.net/GitPython/GitPython-2.0.8.tar.gz
 Source0  : http://pypi.debian.net/GitPython/GitPython-2.0.8.tar.gz
 Summary  : Python Git Library
