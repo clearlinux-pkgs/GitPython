@@ -4,7 +4,7 @@
 #
 Name     : GitPython
 Version  : 2.1.3
-Release  : 11
+Release  : 12
 URL      : http://pypi.debian.net/GitPython/GitPython-2.1.3.tar.gz
 Source0  : http://pypi.debian.net/GitPython/GitPython-2.1.3.tar.gz
 Summary  : Python Git Library
