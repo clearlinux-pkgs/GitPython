@@ -6,7 +6,7 @@
 #
 Name     : GitPython
 Version  : 2.1.5
-Release  : 14
+Release  : 15
 URL      : http://pypi.debian.net/GitPython/GitPython-2.1.5.tar.gz
 Source0  : http://pypi.debian.net/GitPython/GitPython-2.1.5.tar.gz
 Source99 : http://pypi.debian.net/GitPython/GitPython-2.1.5.tar.gz.asc
