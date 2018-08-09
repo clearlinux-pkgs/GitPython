@@ -4,7 +4,7 @@
 #
 Name     : GitPython
 Version  : 2.1.11
-Release  : 17
+Release  : 18
 URL      : https://files.pythonhosted.org/packages/4d/e8/98e06d3bc954e3c5b34e2a579ddf26255e762d21eb24fede458eff654c51/GitPython-2.1.11.tar.gz
 Source0  : https://files.pythonhosted.org/packages/4d/e8/98e06d3bc954e3c5b34e2a579ddf26255e762d21eb24fede458eff654c51/GitPython-2.1.11.tar.gz
 Summary  : Python Git Library
@@ -14,11 +14,8 @@ Requires: GitPython-python3
 Requires: GitPython-license
 Requires: GitPython-python
 Requires: ddt
+Requires: gitdb2
 BuildRequires : buildreq-distutils3
-BuildRequires : pbr
-BuildRequires : pip
-BuildRequires : python3-dev
-BuildRequires : setuptools
 
 %description
 ## GitPython
@@ -60,7 +57,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1532465976
+export SOURCE_DATE_EPOCH=1533789848
 python3 setup.py build -b py3
 
 %install
