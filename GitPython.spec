@@ -6,7 +6,7 @@
 #
 Name     : GitPython
 Version  : 2.1.12
-Release  : 23
+Release  : 24
 URL      : https://files.pythonhosted.org/packages/57/71/852b6eba8cfb2376b7dfe3a8e85e8a6f4786d3e9287819268f77b86123d9/GitPython-2.1.12.tar.gz
 Source0  : https://files.pythonhosted.org/packages/57/71/852b6eba8cfb2376b7dfe3a8e85e8a6f4786d3e9287819268f77b86123d9/GitPython-2.1.12.tar.gz
 Source99 : https://files.pythonhosted.org/packages/57/71/852b6eba8cfb2376b7dfe3a8e85e8a6f4786d3e9287819268f77b86123d9/GitPython-2.1.12.tar.gz.asc
@@ -62,7 +62,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1563735771
+export SOURCE_DATE_EPOCH=1563739799
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
