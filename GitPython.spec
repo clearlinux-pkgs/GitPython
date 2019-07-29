@@ -5,21 +5,19 @@
 # Source0 file verified with key 0x665F99FA9D99966C (byronimo@gmail.com)
 #
 Name     : GitPython
-Version  : 2.1.12
-Release  : 24
-URL      : https://files.pythonhosted.org/packages/57/71/852b6eba8cfb2376b7dfe3a8e85e8a6f4786d3e9287819268f77b86123d9/GitPython-2.1.12.tar.gz
-Source0  : https://files.pythonhosted.org/packages/57/71/852b6eba8cfb2376b7dfe3a8e85e8a6f4786d3e9287819268f77b86123d9/GitPython-2.1.12.tar.gz
-Source99 : https://files.pythonhosted.org/packages/57/71/852b6eba8cfb2376b7dfe3a8e85e8a6f4786d3e9287819268f77b86123d9/GitPython-2.1.12.tar.gz.asc
+Version  : 2.1.13
+Release  : 25
+URL      : https://files.pythonhosted.org/packages/e8/81/5f5149d20fca4bde4ecae4239166043355dc6c6daa42fa7f863de012b965/GitPython-2.1.13.tar.gz
+Source0  : https://files.pythonhosted.org/packages/e8/81/5f5149d20fca4bde4ecae4239166043355dc6c6daa42fa7f863de012b965/GitPython-2.1.13.tar.gz
+Source99 : https://files.pythonhosted.org/packages/e8/81/5f5149d20fca4bde4ecae4239166043355dc6c6daa42fa7f863de012b965/GitPython-2.1.13.tar.gz.asc
 Summary  : Python Git Library
 Group    : Development/Tools
 License  : BSD-3-Clause
 Requires: GitPython-license = %{version}-%{release}
 Requires: GitPython-python = %{version}-%{release}
 Requires: GitPython-python3 = %{version}-%{release}
-Requires: ddt
 Requires: gitdb2
 BuildRequires : buildreq-distutils3
-BuildRequires : ddt
 BuildRequires : gitdb2
 
 %description
@@ -55,14 +53,14 @@ python3 components for the GitPython package.
 
 
 %prep
-%setup -q -n GitPython-2.1.12
+%setup -q -n GitPython-2.1.13
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1563739799
+export SOURCE_DATE_EPOCH=1564408576
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
