@@ -5,21 +5,19 @@
 # Source0 file verified with key 0x665F99FA9D99966C (byronimo@gmail.com)
 #
 Name     : GitPython
-Version  : 3.0.1
-Release  : 28
-URL      : https://files.pythonhosted.org/packages/07/3a/6174cc68e6961d21949f61013a84c38563f69685749c39b4b14ff979fdbe/GitPython-3.0.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/07/3a/6174cc68e6961d21949f61013a84c38563f69685749c39b4b14ff979fdbe/GitPython-3.0.1.tar.gz
-Source1 : https://files.pythonhosted.org/packages/07/3a/6174cc68e6961d21949f61013a84c38563f69685749c39b4b14ff979fdbe/GitPython-3.0.1.tar.gz.asc
+Version  : 3.0.2
+Release  : 29
+URL      : https://files.pythonhosted.org/packages/51/46/993beca52f3b609d148071e129235b866626eeb6056f2faffb41d9d727a7/GitPython-3.0.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/51/46/993beca52f3b609d148071e129235b866626eeb6056f2faffb41d9d727a7/GitPython-3.0.2.tar.gz
+Source1 : https://files.pythonhosted.org/packages/51/46/993beca52f3b609d148071e129235b866626eeb6056f2faffb41d9d727a7/GitPython-3.0.2.tar.gz.asc
 Summary  : Python Git Library
 Group    : Development/Tools
 License  : BSD-3-Clause
 Requires: GitPython-license = %{version}-%{release}
 Requires: GitPython-python = %{version}-%{release}
 Requires: GitPython-python3 = %{version}-%{release}
-Requires: ddt
 Requires: gitdb2
 BuildRequires : buildreq-distutils3
-BuildRequires : ddt
 BuildRequires : gitdb2
 
 %description
@@ -55,14 +53,14 @@ python3 components for the GitPython package.
 
 
 %prep
-%setup -q -n GitPython-3.0.1
+%setup -q -n GitPython-3.0.2
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1565891472
+export SOURCE_DATE_EPOCH=1566482801
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
