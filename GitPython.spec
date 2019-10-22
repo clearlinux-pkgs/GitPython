@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x665F99FA9D99966C (byronimo@gmail.com)
 #
 Name     : GitPython
-Version  : 3.0.3
-Release  : 30
-URL      : https://files.pythonhosted.org/packages/9f/a9/3fa7c55de07ce3cd809726e453d9c44a64a1ea6999940995e15547583820/GitPython-3.0.3.tar.gz
-Source0  : https://files.pythonhosted.org/packages/9f/a9/3fa7c55de07ce3cd809726e453d9c44a64a1ea6999940995e15547583820/GitPython-3.0.3.tar.gz
-Source1 : https://files.pythonhosted.org/packages/9f/a9/3fa7c55de07ce3cd809726e453d9c44a64a1ea6999940995e15547583820/GitPython-3.0.3.tar.gz.asc
+Version  : 3.0.4
+Release  : 31
+URL      : https://files.pythonhosted.org/packages/be/0f/b180ddaf91429d6ebd7d46d022c31522e05ce7631b41da3901d9e4338c64/GitPython-3.0.4.tar.gz
+Source0  : https://files.pythonhosted.org/packages/be/0f/b180ddaf91429d6ebd7d46d022c31522e05ce7631b41da3901d9e4338c64/GitPython-3.0.4.tar.gz
+Source1 : https://files.pythonhosted.org/packages/be/0f/b180ddaf91429d6ebd7d46d022c31522e05ce7631b41da3901d9e4338c64/GitPython-3.0.4.tar.gz.asc
 Summary  : Python Git Library
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -19,6 +19,7 @@ Requires: GitPython-python3 = %{version}-%{release}
 Requires: gitdb2
 BuildRequires : buildreq-distutils3
 BuildRequires : gitdb2
+BuildRequires : util-linux
 
 %description
 ## GitPython
@@ -53,14 +54,15 @@ python3 components for the GitPython package.
 
 
 %prep
-%setup -q -n GitPython-3.0.3
+%setup -q -n GitPython-3.0.4
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1570060819
+export SOURCE_DATE_EPOCH=1571751524
+# -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
@@ -73,7 +75,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/GitPython
-cp LICENSE %{buildroot}/usr/share/package-licenses/GitPython/LICENSE
+cp %{_builddir}/GitPython-3.0.4/LICENSE %{buildroot}/usr/share/package-licenses/GitPython/98a91252d682790e518df3df5c68339d17ab7e47
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -84,7 +86,7 @@ echo ----[ mark ]----
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/GitPython/LICENSE
+/usr/share/package-licenses/GitPython/98a91252d682790e518df3df5c68339d17ab7e47
 
 %files python
 %defattr(-,root,root,-)
