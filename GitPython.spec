@@ -4,7 +4,7 @@
 #
 Name     : GitPython
 Version  : 3.1.0
-Release  : 37
+Release  : 38
 URL      : https://files.pythonhosted.org/packages/ee/bc/c8b6bc8b81b94f50bd46ed690e2677beec0071228e7f153981cb51f4d59a/GitPython-3.1.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/ee/bc/c8b6bc8b81b94f50bd46ed690e2677beec0071228e7f153981cb51f4d59a/GitPython-3.1.0.tar.gz
 Summary  : Python Git Library
@@ -13,6 +13,7 @@ License  : BSD-3-Clause
 Requires: GitPython-license = %{version}-%{release}
 Requires: GitPython-python = %{version}-%{release}
 Requires: GitPython-python3 = %{version}-%{release}
+Requires: gitdb
 Requires: gitdb2
 BuildRequires : buildreq-distutils3
 BuildRequires : gitdb2
@@ -58,7 +59,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1582559465
+export SOURCE_DATE_EPOCH=1582560020
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
