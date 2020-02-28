@@ -4,7 +4,7 @@
 #
 Name     : GitPython
 Version  : 3.1.0
-Release  : 40
+Release  : 41
 URL      : https://files.pythonhosted.org/packages/ee/bc/c8b6bc8b81b94f50bd46ed690e2677beec0071228e7f153981cb51f4d59a/GitPython-3.1.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/ee/bc/c8b6bc8b81b94f50bd46ed690e2677beec0071228e7f153981cb51f4d59a/GitPython-3.1.0.tar.gz
 Summary  : Python Git Library
@@ -18,9 +18,7 @@ BuildRequires : buildreq-distutils3
 BuildRequires : gitdb
 
 %description
-## GitPython
-GitPython is a python library used to interact with git repositories, high-level like git-porcelain,
-or low-level like git-plumbing.
+GitPython is a python library used to interact with Git repositories
 
 %package license
 Summary: license components for the GitPython package.
@@ -44,6 +42,7 @@ python components for the GitPython package.
 Summary: python3 components for the GitPython package.
 Group: Default
 Requires: python3-core
+Provides: pypi(GitPython)
 
 %description python3
 python3 components for the GitPython package.
@@ -58,7 +57,8 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1582589103
+export SOURCE_DATE_EPOCH=1582930228
+# -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
