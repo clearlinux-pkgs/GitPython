@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x665F99FA9D99966C (byronimo@gmail.com)
 #
 Name     : GitPython
-Version  : 3.1.2
-Release  : 44
-URL      : https://files.pythonhosted.org/packages/36/5d/23c3f9a527a1e1c79e8622c7bb74704f6468351cd756e20f65f2ea7aba44/GitPython-3.1.2.tar.gz
-Source0  : https://files.pythonhosted.org/packages/36/5d/23c3f9a527a1e1c79e8622c7bb74704f6468351cd756e20f65f2ea7aba44/GitPython-3.1.2.tar.gz
-Source1  : https://files.pythonhosted.org/packages/36/5d/23c3f9a527a1e1c79e8622c7bb74704f6468351cd756e20f65f2ea7aba44/GitPython-3.1.2.tar.gz.asc
+Version  : 3.1.3
+Release  : 45
+URL      : https://files.pythonhosted.org/packages/5b/ef/96dd6b06400821bbad3f7e275f4a4f88af324124c5c04958e2f2c14ce2c8/GitPython-3.1.3.tar.gz
+Source0  : https://files.pythonhosted.org/packages/5b/ef/96dd6b06400821bbad3f7e275f4a4f88af324124c5c04958e2f2c14ce2c8/GitPython-3.1.3.tar.gz
+Source1  : https://files.pythonhosted.org/packages/5b/ef/96dd6b06400821bbad3f7e275f4a4f88af324124c5c04958e2f2c14ce2c8/GitPython-3.1.3.tar.gz.asc
 Summary  : Python Git Library
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -55,15 +55,15 @@ python3 components for the GitPython package.
 
 
 %prep
-%setup -q -n GitPython-3.1.2
-cd %{_builddir}/GitPython-3.1.2
+%setup -q -n GitPython-3.1.3
+cd %{_builddir}/GitPython-3.1.3
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1588699399
+export SOURCE_DATE_EPOCH=1591221790
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -76,7 +76,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/GitPython
-cp %{_builddir}/GitPython-3.1.2/LICENSE %{buildroot}/usr/share/package-licenses/GitPython/98a91252d682790e518df3df5c68339d17ab7e47
+cp %{_builddir}/GitPython-3.1.3/LICENSE %{buildroot}/usr/share/package-licenses/GitPython/98a91252d682790e518df3df5c68339d17ab7e47
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
