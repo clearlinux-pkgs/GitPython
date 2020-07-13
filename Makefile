@@ -1,5 +1,5 @@
 PKG_NAME := GitPython
-URL = https://files.pythonhosted.org/packages/41/5d/acc4f00a53d6b5383bc04517bc8f7eed16df4a9c55db49abfcacbcd931de/GitPython-3.1.5.tar.gz
+URL = https://files.pythonhosted.org/packages/53/ea/fc34cddaa30bfc5e283f13e754fb3e2648ccd9f7019eaa3518fb5350ae51/GitPython-3.1.7.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
