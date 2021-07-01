@@ -4,7 +4,7 @@
 #
 Name     : GitPython
 Version  : 3.1.18
-Release  : 66
+Release  : 67
 URL      : https://files.pythonhosted.org/packages/29/22/3d591875078c1c5e7e11b478616821995053968a74b76043c55448c46381/GitPython-3.1.18.tar.gz
 Source0  : https://files.pythonhosted.org/packages/29/22/3d591875078c1c5e7e11b478616821995053968a74b76043c55448c46381/GitPython-3.1.18.tar.gz
 Summary  : Python Git Library
