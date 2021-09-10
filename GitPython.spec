@@ -5,12 +5,12 @@
 # Source0 file verified with key 0x9CB5EE7895E8268B (sebastian.thiel@icloud.com)
 #
 Name     : GitPython
-Version  : 3.1.18
-Release  : 70
-URL      : https://files.pythonhosted.org/packages/29/22/3d591875078c1c5e7e11b478616821995053968a74b76043c55448c46381/GitPython-3.1.18.tar.gz
-Source0  : https://files.pythonhosted.org/packages/29/22/3d591875078c1c5e7e11b478616821995053968a74b76043c55448c46381/GitPython-3.1.18.tar.gz
-Source1  : https://files.pythonhosted.org/packages/29/22/3d591875078c1c5e7e11b478616821995053968a74b76043c55448c46381/GitPython-3.1.18.tar.gz.asc
-Summary  : Python Git Library
+Version  : 3.1.23
+Release  : 71
+URL      : https://files.pythonhosted.org/packages/24/70/2709f2f08265ff9d09dbacadceef7d6b2756223e38aca3a0daf65f1fd301/GitPython-3.1.23.tar.gz
+Source0  : https://files.pythonhosted.org/packages/24/70/2709f2f08265ff9d09dbacadceef7d6b2756223e38aca3a0daf65f1fd301/GitPython-3.1.23.tar.gz
+Source1  : https://files.pythonhosted.org/packages/24/70/2709f2f08265ff9d09dbacadceef7d6b2756223e38aca3a0daf65f1fd301/GitPython-3.1.23.tar.gz.asc
+Summary  : GitPython is a python library used to interact with Git repositories
 Group    : Development/Tools
 License  : BSD-3-Clause
 Requires: GitPython-license = %{version}-%{release}
@@ -21,10 +21,9 @@ BuildRequires : buildreq-distutils3
 BuildRequires : gitdb
 
 %description
-## [Gitoxide](https://github.com/Byron/gitoxide): A peek into the future…
-I started working on GitPython in 2009, back in the days when Python was 'my thing' and I had great plans with it.
-Of course, back in the days, I didn't really know what I was doing and this shows in many places. Somewhat similar to
-Python this happens to be 'good enough', but at the same time is deeply flawed and broken beyond repair.
+![Python package](https://github.com/gitpython-developers/GitPython/workflows/Python%20package/badge.svg)
+[![Documentation Status](https://readthedocs.org/projects/gitpython/badge/?version=stable)](https://readthedocs.org/projects/gitpython/?badge=stable)
+[![Packaging status](https://repology.org/badge/tiny-repos/python:gitpython.svg)](https://repology.org/metapackage/python:gitpython/versions)
 
 %package license
 Summary: license components for the GitPython package.
@@ -50,21 +49,22 @@ Group: Default
 Requires: python3-core
 Provides: pypi(gitpython)
 Requires: pypi(gitdb)
+Requires: pypi(typing_extensions)
 
 %description python3
 python3 components for the GitPython package.
 
 
 %prep
-%setup -q -n GitPython-3.1.18
-cd %{_builddir}/GitPython-3.1.18
+%setup -q -n GitPython-3.1.23
+cd %{_builddir}/GitPython-3.1.23
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1627061422
+export SOURCE_DATE_EPOCH=1631282104
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -77,7 +77,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/GitPython
-cp %{_builddir}/GitPython-3.1.18/LICENSE %{buildroot}/usr/share/package-licenses/GitPython/98a91252d682790e518df3df5c68339d17ab7e47
+cp %{_builddir}/GitPython-3.1.23/LICENSE %{buildroot}/usr/share/package-licenses/GitPython/98a91252d682790e518df3df5c68339d17ab7e47
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
