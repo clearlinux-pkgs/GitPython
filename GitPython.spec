@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x9CB5EE7895E8268B (sebastian.thiel@icloud.com)
 #
 Name     : GitPython
-Version  : 3.1.23
-Release  : 71
-URL      : https://files.pythonhosted.org/packages/24/70/2709f2f08265ff9d09dbacadceef7d6b2756223e38aca3a0daf65f1fd301/GitPython-3.1.23.tar.gz
-Source0  : https://files.pythonhosted.org/packages/24/70/2709f2f08265ff9d09dbacadceef7d6b2756223e38aca3a0daf65f1fd301/GitPython-3.1.23.tar.gz
-Source1  : https://files.pythonhosted.org/packages/24/70/2709f2f08265ff9d09dbacadceef7d6b2756223e38aca3a0daf65f1fd301/GitPython-3.1.23.tar.gz.asc
+Version  : 3.1.24
+Release  : 72
+URL      : https://files.pythonhosted.org/packages/34/cc/aaa7a0d066ac9e94fbffa5fcf0738f5742dd7095bdde950bd582fca01f5a/GitPython-3.1.24.tar.gz
+Source0  : https://files.pythonhosted.org/packages/34/cc/aaa7a0d066ac9e94fbffa5fcf0738f5742dd7095bdde950bd582fca01f5a/GitPython-3.1.24.tar.gz
+Source1  : https://files.pythonhosted.org/packages/34/cc/aaa7a0d066ac9e94fbffa5fcf0738f5742dd7095bdde950bd582fca01f5a/GitPython-3.1.24.tar.gz.asc
 Summary  : GitPython is a python library used to interact with Git repositories
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -56,15 +56,15 @@ python3 components for the GitPython package.
 
 
 %prep
-%setup -q -n GitPython-3.1.23
-cd %{_builddir}/GitPython-3.1.23
+%setup -q -n GitPython-3.1.24
+cd %{_builddir}/GitPython-3.1.24
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1631282104
+export SOURCE_DATE_EPOCH=1632179088
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -77,7 +77,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/GitPython
-cp %{_builddir}/GitPython-3.1.23/LICENSE %{buildroot}/usr/share/package-licenses/GitPython/98a91252d682790e518df3df5c68339d17ab7e47
+cp %{_builddir}/GitPython-3.1.24/LICENSE %{buildroot}/usr/share/package-licenses/GitPython/98a91252d682790e518df3df5c68339d17ab7e47
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
